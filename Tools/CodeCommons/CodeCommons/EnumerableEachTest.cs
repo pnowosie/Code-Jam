@@ -5,6 +5,8 @@ using System.Linq;
 
 namespace CodeCommons
 {
+    using GCJ;
+
     [TestClass]
     public class EnumerableEachTest
     {

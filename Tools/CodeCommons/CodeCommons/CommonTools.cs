@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Diagnostics;
 
-namespace CodeCommons
+namespace GCJ
 {
     #region Common Tools
     internal static class Ext

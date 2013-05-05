@@ -1,10 +1,12 @@
-﻿using System;
+﻿#region Usings
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
 using System.Numerics;
 using System.Diagnostics;
+#endregion
 using io = System.Console;
 using E = System.Linq.Enumerable;
 
@@ -12,7 +14,6 @@ namespace GCJ
 {
     class Program
     {
-        private static List<int> motes;
         static void Main(string[] args)
         {
             System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.InvariantCulture;
@@ -23,8 +24,8 @@ namespace GCJ
             foreach (var C in E.Range(1, T))
             {
                 int curM = int.Parse(io.ReadLine().Split().First());
-                motes = io.ReadLine().Split().Select(int.Parse).ToList();
-                motes.Sort();
+                var motes = io.ReadLine().Split()
+                              .Select(int.Parse).OrderBy(m => m).ToList();
 
                 List<int> bestSoFar = new List<int> { motes.Count };
                 Debug.Assert(bestSoFar.Count == 1);
